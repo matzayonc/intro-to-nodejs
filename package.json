@@ -1,0 +1,19 @@
+{
+  "name": "spec1",
+  "version": "1.0.0",
+  "description": "nope",
+  "main": "server1.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "tracer": ">0.0.0",
+    "querystring": "*",
+    "fs": "*",
+    "formidable": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "ja",
+  "license": "ISC"
+}

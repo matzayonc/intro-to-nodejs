@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    text-align: center;
+}
+
+#input {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 100px;
+    background-color: rgb(73, 176, 211);
+}
+
+#output {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 100px;
+    background-color: rgb(10, 235, 160);
+}
+
+.circle{
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border-radius: 55px;
+    border: 10px solid rgb(240, 75, 75);
+    background-color: rgb(248, 144, 144);
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    color: rgb(32, 21, 182);
+    position: absolute;
+}

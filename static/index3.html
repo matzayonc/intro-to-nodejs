@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index1</title>
+    <script src="js/JQ.js"></script>
+    <style>
+        div {
+            height: 50px;
+            width: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="txt1" type="text" name="txt1" value="100">
+    <input id="txt2" type="text" name="txt2" value="200">
+    <div id=div>Kliknij</div>
+</body>
+<script>
+
+    $("#div").on("click", function (e) {
+
+        $.ajax({
+            url: "",
+            data: { a: document.getElementById("txt1").value, b: document.getElementById("txt2").value },
+            type: "POST",
+            success: function (data) {
+                //czytamy odesłane z serwera dane
+                var obj = JSON.parse(data)
+                console.log(obj)
+                alert("Wynik mnożenia to " + obj)
+
+                //tu wypisz sumę w div-ie na stronie
+
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr);
+            },
+        });
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index4</title>
+    <script src="js/JQ.js"></script>
+    <style>
+        #input {
+            width: 200px;
+        }
+
+        #output {
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="range" min="1" max="100" value="1" id="input"><br>
+    <input type="range" min="1" max="300" value="3" id="output">
+
+</body>
+<script>
+
+    $("#input").on("mousemove", function () {
+
+        $.ajax({
+            url: "",
+            data: { pos: $("#input").val() },
+            type: "POST",
+            success: function (data) {
+                var obj = JSON.parse(data)
+                console.log(obj.pos)
+                $("#output").val(parseInt(obj.pos))
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr);
+            },
+        });
+    })
+
+</script>
+
+</html>
